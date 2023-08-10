@@ -9,12 +9,12 @@
 </head>
 <body>
     <div id="wrapper">
-        <h2>cm to inches</h2>
+        <h2>Celsius to Fahrenheit </h2>
         <div class="inputdiv">
-            <input type="text" id="input" placeholder="length in cm">
+            <input type="text" id="input" placeholder="temperature in celius">
         </div>
         <div>
-            <button type="submit" onclick="convert()">Convert to inches</button>
+            <button type="submit" onclick="convert()">Convert to Fahrenheit</button>
         </div>
         <div id="result">
 
@@ -23,9 +23,9 @@
     <script>
       function convert(){
         const cmVal = Number(document.getElementById("input").value)
-        const inchVal = cmVal/2.54
+        const inchVal = (cmVal*1.8)+32
         const result = document.getElementById("result")
-        result.innerHTML = inchVal.toFixed(2) + " inches"
+        result.innerHTML = inchVal.toFixed(2) + " inches" // to fixed -to get values after decimal 
       }
     </script>
 </body>
